@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>sathya</groupId>
+    <groupId>DevOps</groupId>
     <artifactId>TestProject</artifactId>
-    <version>1.5</version>
+    <version>1.0</version>
     <packaging>war</packaging>
     <name>myproj</name>
     <properties>
@@ -25,8 +25,8 @@
     </scm>
     <developers>
         <developer>
-            <name>Arun Gupta</name>
-            <email>arun.gupta@gmail.com</email>
+            <name>Devops Training</name>
+            <email>devopstraining@gmail.com</email>
         </developer>
     </developers>
     <distributionManagement>
