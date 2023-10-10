@@ -4,7 +4,7 @@ pipeline {
         stage('clone repo') { 
             steps {
                 sh "rm -rf mavenproject"
-                sh "git clone git@github.com:devopstraining611-282/mavenproject.git"
+                sh "git clone https://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@github.com/devopstraining611-282/mavenproject.git"
                 sh "mvn clean -f mavenproject"
             }
         }
