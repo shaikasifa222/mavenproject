@@ -1,37 +1,36 @@
-Pipeline Script-1:
-==============
 pipeline {
     agent any 
     stages {
         stage('clone repo') { 
             steps {
-                sh "rm -rf mvnproj"
-                sh "git clone https://github.com/sathyadevops/mvnproj.git"
-                sh "mvn clean -f mvnproj"
+                sh "rm -rf mavenproject"
+                sh "git clone git@github.com:devopstraining611-282/mavenproject.git"
+                sh "mvn clean -f mavenproject"
             }
         }
         stage('Compile') { 
             steps {
-                sh "mvn compile -f mvnproj"
+                sh "mvn compile -f mavenproject"
             }
         }
         stage('Test') { 
             steps {
-                sh "mvn test -f mvnproj"
+                sh "mvn test -f mavenproject"
             }
         }
         stage('package') { 
             steps {
-                sh "mvn package -f mvnproj"
+                sh "mvn package -f mavenproject"
+            }
+        }
+        stage('install') { 
+            steps {
+                sh "mvn install -f mavenproject"
             }
         }
         stage('deploy') { 
             steps {
-                sh "cp 
-
-/var/lib/jenkins/workspace/JENKINS_PILELINE1/mvnproj/target/myproj.war 
-
-/var/lib/tomcat9/webapps/"
+                sh "cp /root/.m2/repository/DevOps/TestProject/1.0/TestProject-1.0.war /var/lib/tomcat9/webapps"
             }
         }
     }
