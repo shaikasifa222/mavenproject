@@ -30,7 +30,7 @@ pipeline {
         }
         stage('deploy') { 
             steps {
-                sh "cp /root/.m2/repository/DevOps/TestProject/1.0/TestProject-1.0.war /var/lib/tomcat9/webapps"
+                sh "/var/lib/jenkins/.m2/repository/DevOps/TestProject/1.0/TestProject-1.0.war /var/lib/tomcat9/webapps"
             }
         }
     }
