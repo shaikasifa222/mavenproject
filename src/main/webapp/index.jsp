@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Hello Java EE Continuous Delivery!</title>
     </head>
-    <body bgcolor="orange" text="brown">
+    <body bgcolor="cyan" text="brown">
  <table border = "4" bordercolor = "yellow" bgcolor = "green">
          <tr>
             <th>Column 1</th>
