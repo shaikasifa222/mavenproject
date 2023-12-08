@@ -28,7 +28,7 @@ pipeline {
         }
                 stage('--build-image--') {
             steps {
-                sh "docker build -t mavenproj:latest"
+                sh "docker build -t mavenproj:latest ."
             }
         }
                 stage('--run-container--') {
