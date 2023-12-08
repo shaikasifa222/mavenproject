@@ -39,7 +39,7 @@ pipeline {
         }
         stage('--run-container--') {
             steps {
-                sh "docker run -itd -p 8081:8080 --name mavencontainer mavenproj:latest"
+                sh "docker run -itd --name mavencontainer mavenproj:latest"
             }
         }
         stage('--exec-container--') {
