@@ -26,5 +26,15 @@ pipeline {
                 sh "mvn install"
             }
         }
+                stage('--build-image--') {
+            steps {
+                sh "docker build -t mavenproj:latest"
+            }
+        }
+                stage('--run-container--') {
+            steps {
+                sh "docker run -itd -p 8081:8080 mavenproj:latest"
+            }
+        }
     }
 }
