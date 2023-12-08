@@ -28,8 +28,8 @@ pipeline {
         }
         stage('--remove all containers & images--') {
             steps {
-                sh "docker rm $(docker ps -aq)"
-                sh "docker rmi $(docker images -q)"
+                sh "docker rm $(docker ps -aq) --force"
+                sh "docker rmi $(docker images -q) --force"
             }
         }
         stage('--build-image--') {
