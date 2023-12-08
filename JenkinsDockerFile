@@ -26,14 +26,19 @@ pipeline {
                 sh "mvn install"
             }
         }
-                stage('--build-image--') {
+        stage('--build-image--') {
             steps {
                 sh "docker build -t mavenproj:latest ."
             }
         }
-                stage('--run-container--') {
+        stage('--run-container--') {
             steps {
-                sh "docker run -itd -p 8081:8080 mavenproj:latest"
+                sh "docker run -itd -p 8081:8080 --name mavencontainer mavenproj:latest"
+            }
+        }
+        stage('--exec-container--') {
+            steps {
+                sh "docker exec -d mavencontainer catalina.sh run"
             }
         }
     }
