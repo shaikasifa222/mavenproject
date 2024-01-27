@@ -44,7 +44,7 @@ pipeline {
         }
         stage('--exec-container--') {
             steps {
-                sh "docker exec mavencontainer catalina.sh run"
+                sh "docker exec -d mavencontainer catalina.sh run"
             }
         }
     }
