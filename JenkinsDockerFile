@@ -39,7 +39,7 @@ pipeline {
         }
         stage('--run-container--') {
             steps {
-                sh "docker run -itd --name mavencontainer mavenproj:latest"
+                sh "docker run -itd --name mavencontainer mavenproj:latest /bin/bash"
             }
         }
         stage('--exec-container--') {
